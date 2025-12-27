@@ -7,12 +7,13 @@ const cookieParser=require("cookie-parser");
 const blogrouter=require("./routes/blog")
 const { checkForAuthenticationCookie } = require('./middleware/auth');
 const blogs=require('./models/blog')
+require('dotenv').config();
 
 
 
 app.use(express.static(path.resolve("./public")))
 
-url="mongodb://127.0.0.1:27017/blogDB";
+url=process.env.MONGO_URL || "mongodb://127.0.0.1:27017/blogDB";
 connectDB(url);
 const port=process.env.PORT || 3000;
 

@@ -34,7 +34,7 @@
                 <img 
                     src="/<%= blog.createdBy.profileImageUrl%>"
                     class="rounded-circle border"
-                    style="height: 70px; width: 70px; object-fit: cover;"
+                    style="height: 70px; width: 70px; object-fit: contain;"
                     alt="Author"
                 >
 
@@ -52,7 +52,44 @@
     </div>
 </div>
 
+<div class="container mt-4">
+
+    <h1>Comments (<%=comments.length%>)</h1>
+
+     <% if (locals.user) { %>
+        <form action="/blog/comment/<%= blog._id%>" method="POST">
+         <div class="mb-3">
+                <input type="text" class="form-control" id="content" name="content" placeholder="Enter your comment" required>
+            </div>
+
+            <button class="btn btn-primary px-4 mb-5" type="submit" class="btn btn-primary">Add</button>
+    </form>
+        <% }  %>
+    
+</div>
+
+
+
+<div class="container m-auto">
+    
+    <% comments.forEach(comment => { %>
+      <div>
+          <img 
+                    src="<%= comment.createdBy.profileImageUrl%>"
+                    class="rounded-circle border"
+                    style="height: 25px; width: 25px; object-fit: contain;"
+                    alt=""
+                >
+        <%=comment.createdBy.fullName%>: <pre><%=comment.content%></pre>
+      </div>
+
+      
+    <% }) %>
+</div>
+
 <%- include('./partials/scripts') %>
 
 </body>
 </html>
+
+

@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
     
     profileImageUrl: {
         type: String,
-        default:"../public/user.png"
+        default:"user.png"
     },
     role:{
         type:String,

@@ -73,11 +73,11 @@
 <div class="container m-auto">
     
     <% comments.forEach(comment => { %>
-      <div>
+      <div class="flex justify-content-center">
           <img 
-                    src="<%= comment.createdBy.profileImageUrl%>"
+                    src="/<%= comment.createdBy.profileImageUrl%>"
                     class="rounded-circle border"
-                    style="height: 25px; width: 25px; object-fit: contain;"
+                    style="height: 20px; width: 20px; object-fit: cover;"
                     alt=""
                 >
         <%=comment.createdBy.fullName%>: <pre><%=comment.content%></pre>

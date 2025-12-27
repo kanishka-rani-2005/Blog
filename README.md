@@ -58,21 +58,17 @@ Users can register, log in, create blogs with cover images, and view author prof
 
 ## 🖼 Screenshots
 
-### 🏠 Homepage
+## 🏠 Homepage
 
-![Homepage](frontend_pic/home.png)
+![Homepage](frontend_pic/1.png)
 
-### 📝 Blog Detail Page
+### 📝 Blog Post Page
 
-![Blog Page](frontend_pic/blog.png)
+![Blog Page](frontend_pic/2.png)
 
-### 🔐 Login Page
+### 🔐 SignUp Page
 
-![Login](frontend_pic/login.png)
-
-> 📌 Make sure images are inside `frontend_pic/` and filenames match.
-
----
+![Login Page](frontend_pic/3.png)
 
 ## 🛠 Tech Stack
 
